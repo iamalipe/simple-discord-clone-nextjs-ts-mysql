@@ -1,4 +1,4 @@
-# [simple-discord-clone-nextjs-ts-mysql](https://simple-canvas-playground.web.app/)
+# [simple-discord-clone-nextjs-ts-mysql](https://simple-discord-clone-nextjs-ts-mysql.vercel.app)
 
 # Hosted on [Vercel](https://vercel.com)
 

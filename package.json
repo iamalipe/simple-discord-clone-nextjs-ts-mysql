@@ -6,10 +6,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamalipe/simple-canvas-playground-react-ts.git"
+    "url": "https://github.com/iamalipe/simple-discord-clone-nextjs-ts-mysql.git"
   },
   "description": "A Simple Discord Clone build using NextJs and MySQL",
-  "homepage": "https://simple-canvas-playground.web.app",
+  "homepage": "https://simple-discord-clone-nextjs-ts-mysql.vercel.app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
