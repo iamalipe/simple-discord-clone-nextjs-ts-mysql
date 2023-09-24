@@ -1,6 +1,6 @@
 # [simple-discord-clone-nextjs-ts-mysql](https://simple-discord-clone-nextjs-ts-mysql.vercel.app)
 
-# Hosted on [Vercel](https://vercel.com)
+## Hosted on [Vercel](https://vercel.com)
 
 ## Build using
 
@@ -12,3 +12,29 @@
 - [@tanstack/query](https://tanstack.com/query/latest) for Infinite loading for messages.
 - [ImageKit](https://imagekit.io) for Upload Images and Attachments.
 - [Livekit](https://livekit.io) for Audio and Video Calling and chat room.
+
+### Prerequisites
+
+Node version 18.x.x
+
+### Setup Prisma
+
+```shell
+npx prisma generate
+npx prisma db push
+
+```
+
+### Start the app
+
+```shell
+npm run dev
+```
+
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
