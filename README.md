@@ -12,6 +12,7 @@
 - [@tanstack/query](https://tanstack.com/query/latest) for Infinite loading for messages.
 - [ImageKit](https://imagekit.io) for Upload Images and Attachments.
 - [Livekit](https://livekit.io) for Audio and Video Calling and chat room.
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form) and [Zod](https://zod.dev/) for Client Side Form Validation.
 
 ### Prerequisites
 
