@@ -1,15 +1,21 @@
 "use client";
 
+import { Plus } from "lucide-react";
+
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Plus } from "lucide-react";
+
+import { useModal } from "@/hooks/use-modal-store";
 
 const ServerAdd = () => {
+  const { onOpen } = useModal();
+
   const onClick = () => {
+    onOpen("createServer");
     // router.push(`/servers/${id}`);
   };
 
