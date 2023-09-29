@@ -5,11 +5,9 @@ import { useEffect, useState } from "react";
 
 const ModalsProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
-
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
   if (!isMounted) {
     return null;
   }

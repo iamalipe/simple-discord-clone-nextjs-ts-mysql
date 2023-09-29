@@ -25,12 +25,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { useModal } from "@/hooks/use-modal-store";
 import { IkImage } from "@/components/image-kit/ik-image";
 import { imageKitUpload } from "@/lib/image-kit-upload";
-// import { FileUpload } from "@/components/file-upload";
 
 const MAX_FILE_SIZE = 5000000;
 const ACCEPTED_IMAGE_TYPES = [
@@ -45,7 +43,7 @@ const formSchema = z.object({
     message: "Server name is required.",
   }),
   imageFile: z
-    .instanceof(File)
+    .any()
     .array()
     .refine((files) => files.length > 0, "Server image is required")
     .refine((files) => files[0]?.size <= MAX_FILE_SIZE, "Max file size is 5MB.")
@@ -57,7 +55,12 @@ const formSchema = z.object({
 
 const CreateServerModals = () => {
   const { isOpen, onClose, type } = useModal();
+  const [isMounted, setIsMounted] = useState(false);
   const isModalOpen = isOpen && type === "createServer";
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const router = useRouter();
 
@@ -96,6 +99,10 @@ const CreateServerModals = () => {
     onClose();
   };
 
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <Dialog open={isModalOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-white text-black p-0 overflow-hidden mx-2">
@@ -118,7 +125,6 @@ const CreateServerModals = () => {
                   alt="asd"
                 />
               </div>
-
               <FormField
                 control={form.control}
                 name="imageFile"
