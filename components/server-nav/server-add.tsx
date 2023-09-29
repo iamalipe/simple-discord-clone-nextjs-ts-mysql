@@ -16,7 +16,6 @@ const ServerAdd = () => {
 
   const onClick = () => {
     onOpen("createServer");
-    // router.push(`/servers/${id}`);
   };
 
   return (
